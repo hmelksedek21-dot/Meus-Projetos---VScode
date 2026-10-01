@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia KNOT ART - Lutas & Treinamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-enter">
+    <div id="swup" class="transition-fade">
+        <header>
+            <a class="logo" aria-label="Página inicial">
+                <img src="logo.png" alt="Logo Knot Art">
+            </a>
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#top" class="btn">Início</a></li>
+                    <li><a href="#modalidades" class="btn">Modalidades</a></li>
+                    <li><a href="#horarios" class="btn">Horários</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="top">
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-content">
+                    <h1 id="hero-title">DOMINE AS ARTES MARCIAIS</h1>
+                    <p>Jiu-Jitsu, Muay Thai e Krav Maga com os melhores instrutores.</p>
+                    <a href="https://wa.me/5581986191593" class="btn" target="_blank" rel="noopener noreferrer">Entre em Contato</a>
+                </div>
+            </section>
+        </main>
+
+        <main id="modalidades" class="container page-content">
+            <h1>MODALIDADES</h1>
+            <div class="cards modality-list">
+                <article class="card modality-item active" data-modality="jiu-jitsu">
+                    <button class="modality-toggle" type="button" aria-expanded="true">
+                        <h2>Jiu-Jitsu</h2>
+                    </button>
+                    <div class="modality-content">
+                        <p>Aprenda a arte suave com foco em defesa pessoal, finalizações, controle no solo e condicionamento físico.</p>
+                        <img src="fotoJiu.jpeg" alt="Jiu-Jitsu" class="modality-image">
+                    </div>
+                </article>
+
+                <article class="card modality-item" data-modality="muay-thai">
+                    <button class="modality-toggle" type="button" aria-expanded="false">
+                        <h2>Muay Thai</h2>
+                    </button>
+                    <div class="modality-content">
+                        <p>Treinos intensos de socos, chutes, joelhadas e cotoveladas para ganhar força e resistência.</p>
+                        <img src="fotoMuay.jpeg" alt="Muay Thai" class="modality-image">
+                    </div>
+                </article>
+
+                <article class="card modality-item" data-modality="krav-maga">
+                    <button class="modality-toggle" type="button" aria-expanded="false">
+                        <h2>Krav Maga</h2>
+                    </button>
+                    <div class="modality-content">
+                        <p>Técnicas objetivas e eficientes de defesa pessoal para situações reais do dia a dia.</p>
+                        <img src="fotoKrav.jpeg" alt="Krav Maga" class="modality-image">
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <main id="horarios" class="container page-content">
+            <h1>GRADE DE HORÁRIOS</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modalidade</th>
+                        <th>Dias</th>
+                        <th>Horários</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jiu-Jitsu</td>
+                        <td>Segunda à Quinta</td>
+                        <td>19:00 às 22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Muay Thai</td>
+                        <td>Segunda e Quarta</td>
+                        <td>18:00 às 19:00</td>
+                    </tr>
+                    <tr>
+                        <td>Krav Maga</td>
+                        <td>Sexta</td>
+                        <td> 20:00 às 22:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="footer-logo" src="LogoKnot.png" alt="Logo Knot Art">
+                    <p>Academia de artes marciais focada em técnica, disciplina e evolução.</p>
+                </div>
+
+                <div class="footer-links">
+                    
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p>WhatsApp: (81) 98619-1593</p>
+                    <a href="https://wa.me/5581986191593" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+                    <p>R. Sessenta e Dois - nº 45 / Jardim Paulista - Paulista/PE</p>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 Academia KNOT ART - Todos os direitos reservados.
+            </div>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
