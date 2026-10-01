@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ninito Pizza - Cardápio online com pizzas, promoções e bebidas. Peça agora pelo WhatsApp!">
+  <meta name="keywords" content="pizza, cardápio, promoções, combos, bebidas, Recife">
+  <meta name="author" content="Ninito Pizza">
+  <meta property="og:title" content="Ninito Pizza - O Rei do Tri-Clone">
+  <meta property="og:description" content="Pizzas deliciosas, promoções imperdíveis e entrega rápida!">
+  <meta property="og:image" content="LogoEditada.png">
+  <meta property="og:type" content="website">
+  <title>Ninito Pizza - Cardápio Online | Pizzas, Combos e Bebidas</title>
+  <link rel="shortcut icon" href="LogoEditada.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR - TOPO FIXADO ============ -->
+  <header class="navbar" role="banner">
+    <div class="logo-container">
+      <img src="LogoEditada.png" alt="Ninito Pizza - O Rei do Tri-Clone" class="logo">
+    </div>
+
+    <nav class="nav-menu" role="navigation" aria-label="Menu Principal">
+      <a href="#trabalhe-conosco">💼 TRABALHE CONOSCO</a>
+      <a href="#sobre-pizzaria">🍕 SOBRE NÓS</a>
+      <button class="cart-toggle" id="cart-toggle" type="button" onclick="alternarCarrinho()" aria-controls="cart-panel" aria-expanded="false">
+        🛒 Carrinho <span id="cart-count">0</span>
+      </button>
+    </nav>
+
+    <div class="contact-info">
+      <span>📱 <strong>(81) 98569-6148</strong></span>
+      <a href="https://wa.me/5581985696148?text=Olá%20Ninito%20Pizza,%20gostaria%20de%20fazer%20um%20pedido!" 
+         class="btn-pedir" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         aria-label="Peça agora pelo WhatsApp">
+        FAÇA SEU PEDIDO
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ HERO BANNER ============ -->
+  <section class="hero" aria-label="Banner Principal">
+    <div class="hero-content">
+      <h1>🍕 O REI DO TRI-CLONE 🍕</h1>
+      <p>A melhor pizza da região com entrega rápida, promoções imperdíveis e bebida gelada!</p>
+      <a href="#cardapio-section" class="btn-hero" onclick="mudarAba('promocoes', event)">
+        ⭐ FAZER PEDIDO AGORA
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ BARRA DE CATEGORIAS PRINCIPAIS ============ -->
+  <div class="categories-bar" role="tablist" aria-label="Categorias do Cardápio">
+    <button class="cat-btn active" 
+            id="btn-promocoes" 
+            role="tab" 
+            aria-selected="true" 
+            aria-controls="cardapio-section"
+            onclick="selecionarCategoria('promocoes', event)">
+      🔥 Promoções
+    </button>
+    <button class="cat-btn" 
+            id="btn-pizzas" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="cardapio-section"
+            onclick="selecionarCategoria('pizzas', event)">
+      🍕 Pizzas e Bordas
+    </button>
+    <button class="cat-btn" 
+            id="btn-combos" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="cardapio-section"
+            onclick="selecionarCategoria('combos', event)">
+      🍔 Combos
+    </button>
+    <button class="cat-btn" 
+            id="btn-bebidas" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="cardapio-section"
+            onclick="selecionarCategoria('bebidas', event)">
+      🥤 Bebidas
+    </button>
+  </div>
+
+  <!-- ============ SUB-BARRA DE FILTRO PARA PIZZAS ============ -->
+  <div class="subcategories-bar" id="subcategories-pizzas" style="display: none;" role="tablist" aria-label="Categorias de Pizzas">
+    <button class="sub-btn active" 
+            role="tab" 
+            aria-selected="true" 
+            onclick="filtrarPizzas('todas', event)">
+      📋 Todas as Pizzas e Bordas
+    </button>
+    <button class="sub-btn" 
+            role="tab" 
+            aria-selected="false" 
+            onclick="filtrarPizzas('tradicional', event)">
+      🧀 Pizzas Tradicionais
+    </button>
+    <button class="sub-btn" 
+            role="tab" 
+            aria-selected="false" 
+            onclick="filtrarPizzas('prime', event)">
+      👑 Pizzas Prime
+    </button>
+    <button class="sub-btn" 
+            role="tab" 
+            aria-selected="false" 
+            onclick="filtrarPizzas('borda', event)">
+      🌮 Bordas Recheadas
+    </button>
+  </div>
+
+  <!-- ============ SEÇÃO DINÂMICA DO CARDÁPIO ============ -->
+  <main class="menu-section" id="cardapio-section" role="main">
+    <h2 id="section-title">🔥 PROMOÇÕES IMPERDÍVEIS</h2>
+    <div class="menu-grid" id="items-container" role="region" aria-live="polite" aria-label="Lista de Produtos">
+      <!-- Os itens serão inseridos dinamicamente pelo JavaScript -->
+      <p style="text-align: center; grid-column: 1 / -1; color: #999;">Carregando itens...</p>
+    </div>
+  </main>
+
+  <aside class="cart-panel" id="cart-panel" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-header">
+      <h2 id="cart-title">Seu pedido</h2>
+      <button type="button" onclick="fecharCarrinho()" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty">Seu carrinho está vazio.</p>
+    </div>
+    <div class="cart-footer">
+      <div><span>Total</span><strong id="cart-total">R$ 0,00</strong></div>
+      <button class="btn-confirm" type="button" onclick="enviarCarrinhoWhatsApp()">Enviar pedido no WhatsApp</button>
+    </div>
+  </aside>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer role="contentinfo">
+    <p>&copy; <strong>Ninito Pizza</strong> - Desde 2019 | Todos os direitos reservados.</p>
+    <p>📱 Siga-nos no Instagram: <a href="https://instagram.com/ninito_pizza" target="_blank" rel="noopener noreferrer">@ninito_pizza</a></p>
+    <p style="font-size: 11px; color: #999; margin-top: 10px;">Desenvolvido com ❤️ para sua satisfação</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
