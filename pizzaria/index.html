@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mil Sabores Pizzaria: pizzas artesanais, ingredientes selecionados e sabor para compartilhar.">
+    <title>Mil Sabores | Pizzaria artesanal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="LogoMil.jpg" type="image/png">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span>Aberto hoje · 18h às 22h</span>
+            
+        </div>
+    </div>
+
+    <header>
+        <nav class="container" aria-label="Navegação principal">
+            <a class="logo" href="#inicio">
+                <img src="LogoMil.jpg" alt="Mil Sabores Pizzaria">
+            </a>
+            <div class="nav-links">
+                <a href="#historia">Nossa História</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#visite">Visite-nos</a>
+            </div>
+            <div class="nav-actions">
+                <a class="phone" href="https://wa.me/5581984052314" target="_blank">(81) 98405-2314</a>
+                <!-- Alterado para o WhatsApp -->
+                <a class="order-button" href="https://wa.me/5581984052314" target="_blank">Pedir agora</a>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <img class="hero-photo" src="PlanfletoMil.png" alt="Banner Mil Sabores Pizzaria">
+            <div class="hero-content">
+                <p class="kicker">Pizzaria artesanal · desde 2019</p>
+                <h1>Pizza boa junta todo mundo.</h1>
+                <p class="hero-copy">Massa de fermentação lenta, ingredientes escolhidos a dedo e aquela vontade de fazer uma pizza que vira memória.</p>
+                <a class="hero-button" href="#cardapio">Explorar sabores <span>→</span></a>
+            </div>
+            <div class="hero-stamp">MASSA<br>ARTESANAL<br>★</div>
+        </section>
+
+        <section class="intro" id="historia">
+            <div class="container intro-grid">
+                <div class="intro-photos">
+                    <img src="Captura de tela 2026-08-20 150521 mil sabores 2.jpg" alt="Mil Sabores Pizzaria - A melhor pizza">
+                    <img src="LogoMil.jpg" alt="Logotipo Mil Sabores">
+                </div>
+                <div class="intro-copy">
+                    <p class="section-label">Mais que uma pizzaria</p>
+                    <h2>Feita para caber na sua história.</h2>
+                    <p>A Mil Sabores nasceu de uma mesa cheia, uma massa bem cuidada e a certeza de que as melhores conversas começam com uma boa fatia. Aqui, cada pizza sai do forno com um pouco da nossa casa.</p>
+                    <a class="text-link" href="#visite">Conheça a casa <span>→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="cardapio">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Favoritos da casa</p>
+                        <h2>Escolha seu próximo sabor.</h2>
+                    </div>
+                    <!-- Alterado para o WhatsApp -->
+                    <a class="text-link" target="_blank">Faça seu pedido <span>→</span></a>
+                </div>
+                <div class="menu-grid">
+                    <article class="menu-card">
+                        <div class="card-image">
+                            <img src="Calabresa.jpeg" alt="Pizza de Calabresa Tradicional">
+                            <span class="badge">Peça Agora</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Calabresa Tradicional</h3>
+                                <span class="price">R$ 37,99</span>
+                            </div>
+                            <p>Molho especial, muçarela, calabresa fatiada, rodelas de cebola, azeitonas e orégano.</p>
+                            <!-- Alterado para o WhatsApp -->
+                            <button class="add-button" type="button" onclick="window.open('https://wa.me/5581984052314', '_blank')">Adicionar ao pedido <span aria-hidden="true">+</span></button>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="card-image">
+                            <img src="Calabresa com Barbecue.jpeg" alt="Pizza de Calabresa com Barbecue">
+                            <span class="badge">Peça Agora</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Calabresa Barbecue</h3>
+                                <span class="price">R$ 37,99</span>
+                            </div>
+                            <p>Calabresa artesanal, muçarela, cebola roxa e um toque generoso de molho barbecue.</p>
+                            <!-- Alterado para o WhatsApp -->
+                            <button class="add-button" type="button" onclick="window.open('https://wa.me/5581984052314', '_blank')">Adicionar ao pedido <span aria-hidden="true">+</span></button>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="card-image">
+                            <img src="Frango com Catupiry.jpg" alt="Pizza de Frango com Catupiry">
+                            <span class="badge">Peça Agora</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Frango com Catupiry</h3>
+                                <span class="price">R$ 37,99</span>
+                            </div>
+                            <p>Frango desfiado temperado, milho selecionado, requeijão cremoso e orégano.</p>
+                            <!-- Alterado para o WhatsApp -->
+                            <button class="add-button" type="button" onclick="window.open('https://wa.me/5581984052314', '_blank')">Adicionar ao pedido <span aria-hidden="true">+</span></button>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="card-image">
+                            <img src="Frango.jpg" alt="Pizza de Frango Especial">
+                            <span class="badge">Peça Agora</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Frango Especial</h3>
+                                <span class="price">R$ 37,99</span>
+                            </div>
+                            <p>Abundante frango desfiado da casa com milho verde e temperos artesanais.</p>
+                            <!-- Alterado para o WhatsApp -->
+                            <button class="add-button" type="button" onclick="window.open('https://wa.me/5581984052314', '_blank')">Adicionar ao pedido <span aria-hidden="true">+</span></button>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="card-image">
+                            <img src="Potuguesa.jpg" alt="Pizza Portuguesa">
+                            <span class="badge">Peça Agora</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Portuguesa</h3>
+                                <span class="price">R$ 37,99</span>
+                            </div>
+                            <p>Presunto ralado, muçarela, ovos, rodelas de tomate, cebola, milho e azeitonas.</p>
+                            <!-- Alterado para o WhatsApp -->
+                            <button class="add-button" type="button" onclick="window.open('https://wa.me/5581984052314', '_blank')">Adicionar ao pedido <span aria-hidden="true">+</span></button>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="card-image">
+                            <img src="Marguerita.jpeg" alt="Pizza Marguerita">
+                            <span class="badge">Peça Agora</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-top">
+                                <h3>Marguerita</h3>
+                                <span class="price">R$ 37,99</span>
+                            </div>
+                            <p>Molho de tomate fresco, muçarela derretida, fatias de tomate, azeitonas e manjericão.</p>
+                            <!-- Alterado para o WhatsApp -->
+                            <button class="add-button" type="button" onclick="window.open('https://wa.me/5581984052314', '_blank')">Adicionar ao pedido <span aria-hidden="true">+</span></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner">
+            <div class="banner-image" role="img" aria-label="Pizza saborosa artesanal"></div>
+            <div class="banner-copy">
+                <p class="section-label">O segredo está no tempo</p>
+                <h2>Uma massa que espera para surpreender.</h2>
+                <p>Fermentação lenta por 24 horas, forno quente e ingredientes de qualidade.</p>
+                <!-- Alterado para o WhatsApp -->
+                <a class="text-link" href="https://wa.me/5581984052314" target="_blank">Peça pelo WhatsApp <span>→</span></a>
+            </div>
+        </section>
+
+        <section class="visit" id="visite">
+            <div class="container visit-grid">
+                <div class="visit-copy">
+                    <p class="section-label">Vem para a mesa</p>
+                    <h2>Seu lugar está esperando.</h2>
+                    <p>Chegue sem pressa. A casa é nossa, a mesa é sua e o bom atendimento é por nossa conta.</p>
+                    <div class="details">
+                        <div class="detail">
+                            <strong>Onde estamos</strong>
+                            <span>Jardim Paulista, 218<br>Paulista - Pernambuco</span>
+                        </div>
+                        <div class="detail">
+                            <strong>Horários</strong>
+                            <span>Qua a Dom · 18h às 22h</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-card">
+                    <div>
+                        <strong>Mil Sabores Pizzaria</strong>
+                        <span>Ver rota no mapa ↗</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <footer>
+        <div class="container footer-row">
+            <a class="logo" href="#inicio">
+                <img src="LogoMil.jpg" alt="Mil Sabores Pizzaria">
+            </a>
+            <p class="footer-meta">Pizza artesanal para dividir o melhor da vida.</p>
+            <div class="social">
+                <a href="https://www.instagram.com/mil__saboress?igsi=MWgyNnAzOHZmdXR6cQ==" target="_blank" rel="noopener noreferrer" aria-label="Acesse o Instagram da Mil Sabores">
+                    <img src="InstagramMil.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/5581984052314" target="_blank" rel="noopener noreferrer" aria-label="Fale com a Mil Sabores pelo WhatsApp">
+                    <img src="WhatMil.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
